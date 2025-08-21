@@ -2,7 +2,7 @@
   "name": "quality-quanta-landing",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://YOUR_USERNAME.github.io/YOUR_REPO_NAME",
+  "homepage": "https://github.com/Accounting-AI/quality-quanta-page",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
