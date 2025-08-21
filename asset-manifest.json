@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/quality-quanta-page/static/js/main.4b6f040f.js",
+    "main.js": "/quality-quanta-page/static/js/main.034dcf14.js",
     "index.html": "/quality-quanta-page/index.html",
-    "main.4b6f040f.js.map": "/quality-quanta-page/static/js/main.4b6f040f.js.map"
+    "main.034dcf14.js.map": "/quality-quanta-page/static/js/main.034dcf14.js.map"
   },
   "entrypoints": [
-    "static/js/main.4b6f040f.js"
+    "static/js/main.034dcf14.js"
   ]
 }
