@@ -79,9 +79,58 @@ npm run build
 
 ## Deployment
 
-Static hosting ready. Configuration files included:
-- `netlify.toml` - Netlify deployment
-- `vercel.json` - Vercel deployment
+This project uses **manual deployment** to GitHub Pages via the `gh-pages` branch.
+
+### Making Updates
+
+When you make changes to the landing page:
+
+1. **Build the project:**
+   ```bash
+   npm run build
+   ```
+
+2. **Switch to gh-pages branch:**
+   ```bash
+   git checkout gh-pages
+   ```
+
+3. **Copy build files to root:**
+   ```bash
+   cp -r build/* .
+   ```
+
+4. **Remove build directory:**
+   ```bash
+   rm -rf build
+   ```
+
+5. **Commit and push changes:**
+   ```bash
+   git add .
+   git commit -m "Update landing page"
+   git push origin gh-pages
+   ```
+
+6. **Switch back to main branch:**
+   ```bash
+   git checkout main
+   ```
+
+### GitHub Pages Configuration
+
+Ensure GitHub Pages is configured to serve from:
+- **Source:** Deploy from a branch
+- **Branch:** `gh-pages`
+- **Folder:** `/ (root)`
+
+The site will be available at: `https://accounting-ai.github.io/quality-quanta-page/`
+
+## Alternative Deployment Options
+
+For automated deployment, consider:
+- **Netlify:** Use `netlify.toml` configuration
+- **Vercel:** Use `vercel.json` configuration
 
 ## Dependencies
 
