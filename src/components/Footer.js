@@ -50,7 +50,7 @@ const Footer = () => {
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
                 <Box
                   component="img"
-                  src="/images/qq-logo-1.png"
+                  src={process.env.PUBLIC_URL + '/images/qq-logo-1.png'}
                   alt="Quality Quanta Logo"
                   sx={{
                     height: 40,

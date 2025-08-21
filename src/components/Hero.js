@@ -121,7 +121,7 @@ const Hero = () => {
             >
               <Box
                 component="img"
-                src="/images/qq-hero-3.png"
+                src={process.env.PUBLIC_URL + '/images/quality-quanta-hero-1.png'}
                 alt="Quality Quanta Platform Dashboard"
                 sx={{
                   width: { xs: '280px', sm: '400px', md: '500px' },

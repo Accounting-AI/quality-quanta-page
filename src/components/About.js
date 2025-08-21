@@ -106,7 +106,7 @@ const About = () => {
             >
               <Box
                 component="img"
-                src="/images/qq-about-1.png"
+                src={process.env.PUBLIC_URL + '/images/qq-about-1.png'}
                 alt="Quality Quanta Team and Process"
                 sx={{
                   width: { xs: '320px', sm: '450px', md: '500px' },
