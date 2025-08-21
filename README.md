@@ -90,32 +90,61 @@ When you make changes to the landing page:
    npm run build
    ```
 
-2. **Switch to gh-pages branch:**
+2. **Verify build contents (IMPORTANT):**
+   ```bash
+   ls -la build/
+   ```
+   You should see: `index.html`, `asset-manifest.json`, `static/`, `images/`
+   **DO NOT proceed if you see `node_modules/` in the build directory**
+
+3. **Switch to gh-pages branch:**
    ```bash
    git checkout gh-pages
    ```
 
-3. **Copy build files to root:**
+4. **Clear existing files (safety measure):**
    ```bash
-   cp -r build/* .
+   rm -rf *
    ```
 
-4. **Remove build directory:**
+5. **Copy ONLY build files (explicitly exclude node_modules):**
    ```bash
-   rm -rf build
+   cp -r build/index.html .
+   cp -r build/asset-manifest.json .
+   cp -r build/static .
+   cp -r build/images .
+   ```
+   
+   **OR use this safer alternative:**
+   ```bash
+   cp -r build/* . && rm -rf node_modules package*.json
    ```
 
-5. **Commit and push changes:**
+6. **Verify gh-pages contents:**
+   ```bash
+   ls -la
+   ```
+   You should see: `index.html`, `asset-manifest.json`, `static/`, `images/`
+   **You should NOT see `node_modules/`, `package.json`, or `package-lock.json`**
+
+7. **Commit and push changes:**
    ```bash
    git add .
    git commit -m "Update landing page"
    git push origin gh-pages
    ```
 
-6. **Switch back to main branch:**
+8. **Switch back to main branch:**
    ```bash
    git checkout main
    ```
+
+### ⚠️ Important Safety Notes
+
+- **Never copy `node_modules/`** to the `gh-pages` branch
+- **Never copy `package.json` or `package-lock.json`** to the `gh-pages` branch
+- The `gh-pages` branch should **only contain** the built static files
+- If you accidentally copy `node_modules/`, use `git filter-repo` to clean the history
 
 ### GitHub Pages Configuration
 
