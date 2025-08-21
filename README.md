@@ -2,6 +2,8 @@
 
 React landing page built with Material UI for Quality Quanta.
 
+**Live Demo:** [https://accounting-ai.github.io/quality-quanta-page/](https://accounting-ai.github.io/quality-quanta-page/)
+
 ## Tech Stack
 
 - React 18.2.0
