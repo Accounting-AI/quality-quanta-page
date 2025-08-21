@@ -23,8 +23,14 @@ jobs:
     - name: Install dependencies
       run: npm ci
       
+    - name: List files
+      run: ls -la
+      
     - name: Build
       run: npm run build
+      
+    - name: List build files
+      run: ls -la build/
       
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
