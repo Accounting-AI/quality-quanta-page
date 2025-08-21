@@ -144,7 +144,7 @@ const Features = () => {
                   <Typography
                     variant="body1"
                     sx={{
-                      color: theme.palette.text.secondary,
+                      color: theme.palette.grey[500],
                       lineHeight: 1.6,
                     }}
                   >
